@@ -2,51 +2,61 @@
 <html lang="en">
 
 <head>
-  <title>Eventos</title>
+  <title>Tienda de bebes</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="/css/index.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color: #bf8f73;">
+
   <div class="container">
-    <h1>Stock de Productos</h1>
-    <table id="stock-productos" class="table-productos"></table>
-    <button type="button" class="btn btn-primary">Anterior</button>
-    <button type="button" class="btn btn-primary">Siguiente</button>
+    <div class="lista_productos">
+      <h1>Bienvenida/o a la tienda de ropa para tu bendicion</h1>
+      <ul class="list-group">
+        <li class="list-group-item">Polera UNISEX - Algodón Con Lycra - $2.700</li>
+        <li class="list-group-item">Musculosa - Jersey - $2.050</li>
+        <li class="list-group-item">Remera - Jersey - $1.890</li>
+        <li class="list-group-item">Chomba - Jersey - $2.600</li>
+        <li class="list-group-item">Body - Jersey - $1.730</li>
+      </ul>
+    </div>
+
+    <div class="formulario_productos">
+      <h1>Formulario de ingreso de Productos</h1>
+      <form id="ingreso-producto">
+        <div class="mb-3"><label for="Nombre" class="form-label">Producto:</label><input type="text"
+            class="form-control" id="Nombre" required></div>
+        <div class="mb-3"><label for="Precio" class="form-label">Precio:</label><input type="number"
+            class="form-control" id="Precio" required></div>
+        <div class="mb-3">
+          <label for="genero" class="form-label">Genero:</label>
+          <select class="form-select form-control" id="genero" required aria-label="Default select examples"></select>
+        </div>
+        <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+      </form>
+    </div>
+
+    <div class="tabla_productos">
+      <p id="mensaje-error"></p>
+      <table id="tabla" class="table" hiddens>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Genero</th>
+          <th>Borrar</th>
+        </tr>
+      </table>
+      <p id="mensaje-servidor" hidden>Esperando al servidor...</p>
+    </div>
+
   </div>
-  <div class="container">
-    <h1>Bienvenida/o a la tienda de ropa para tu bendicion</h1>
-    <ul class="list-group">
-      <li class="list-group-item">Polera UNISEX - Algodón Con Lycra - $2.700</li>
-      <li class="list-group-item">Musculosa - Jersey - $2.050</li>
-      <li class="list-group-item">Remera - Jersey - $1.890</li>
-      <li class="list-group-item">Chomba - Jersey - $2.600</li>
-      <li class="list-group-item">Body - Jersey - $1.730</li>
-    </ul>
-  </div>
-  <div class="container">
-    <h1>Formulario de ingreso de Productos</h1>
-    <form id="ingreso-producto">
-      <div class="mb-3"><label for="Nombre" class="form-label">Producto:</label><input type="text" class="form-control"
-          id="Nombre" required></div>
-      <div class="mb-3"><label for="Precio" class="form-label">Precio:</label><input type="number" class="form-control"
-          id="Precio" required></div>
-      <button type="submit" class="btn btn-primary mb-3">Enviar</button>
-    </form>
-    <p id="mensaje-error"></p>
-    <table id="tabla" class="table">
-      <tr>
-        <th>Producto</th>
-        <th>Precio</th>
-        <th>Borrar</th>
-      </tr>
-    </table>
-  </div>
+
+  <script src="./js/stock-de-productos.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  <script src="js/producto.js"></script>
+  <script src="./js/producto.js"></script>
   <script src="./js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
