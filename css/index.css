@@ -1,7 +1,23 @@
 .lista_productos h1 {
-    color: #303033;
+    color: white;
 }
 
 .lista_productos li {
     font-size: 1.03em;
+}
+
+.formulario_productos h1 {
+    color: white;
+}
+
+.tabla_productos tr th {
+    color: white;
+}
+
+tr {
+    color: white;
+}
+
+#ingreso-producto label {
+    color: white q;
 }

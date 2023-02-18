@@ -40,7 +40,7 @@ const agregarFilaALaTabla = ({ Nombre, Precio, genero }) => {
 
 
   const botonera = document.createElement('td');
-  botonera.innerHTML = `<button class="btn btn-danger mb-3">Borrar</button>`;
+  botonera.innerHTML = `<button type="submit" class="btn btn-danger mb-3">Borrar</button>`;
   botonera.addEventListener('click', () => {
     Swal.fire({
       text: `Estas seguro de borrar ${Nombre}?`,
